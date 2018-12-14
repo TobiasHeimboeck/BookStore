@@ -5,6 +5,7 @@ var main = new Vue({
     },
     created() {
         this.startFetchingAsync("https://api.myjson.com/bins/zyv02");
+        this.loader();
     },
     methods: {
         startFetchingAsync(url) {
@@ -42,13 +43,18 @@ var main = new Vue({
             var backPage = document.createElement("div");
             backPage.className = "backPage";
 
+            var displayName = document.createElement("h5");
+            displayName.className = "displayName";
+            displayName.innerHTML = book.title;
+
             var displayPicture = document.createElement("img");
             displayPicture.className = "displayPicture";
             displayPicture.setAttribute("src", book.cover);
 
             frontPage.append(displayPicture);
 
-            backPage.innerHTML = book.description;
+
+            backPage.append(displayName, book.description);
 
             var infoButton = document.createElement("button");
             infoButton.className = "infoButton";
@@ -59,6 +65,13 @@ var main = new Vue({
             backPage.append(infoButton);
             flip.append(frontPage, backPage);
             cardElement.append(flip);
+        },
+        loader() {
+            setTimeout(this.showPage, 1000);
+        },
+        showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
         }
     }
 });

@@ -20,7 +20,7 @@
 
     <div id="main">
 
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default sticky">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -46,9 +46,17 @@
             </div>
         </nav>
 
-        <!-- Section for the books of the json api. On hover the books were flipped and you see more informations -->
-        <div id="animatedBooks"></div>
+        <div id="loader"></div>
+        <div style="display:none;" id="myDiv" class="animate-bottom">
 
+            <div class="content">
+
+                <!-- Section for the books of the json api. On hover the books were flipped and you see more informations -->
+                <div id="animatedBooks"></div>
+
+            </div>
+
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
