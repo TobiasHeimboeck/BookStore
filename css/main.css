@@ -1,0 +1,82 @@
+body {
+    background: url("../img/background.jpg") no-repeat;
+    background-size: 1500px;
+    background-attachment: fixed;
+}
+
+/* ============= Navbar section ============= */
+
+.navbar {
+    background: rgb(218, 136, 13);
+    border: 0;
+    border-radius: 0;
+}
+
+.logo {
+    height: 100px;
+    width: 110px;
+}
+
+.header {
+    font-family: serif;
+    margin-left: 30px;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 0;
+    background-color: rgb(204, 133, 27);
+    box-shadow: none;
+}
+
+/* ============= Body section ============= */
+
+#animatedBooks {
+    margin-top: 20px;
+}
+
+.flippingProcess {
+    margin: 10px;
+    float: left;
+}
+
+.displayPicture {
+    height: 300px;
+}
+
+.infoButton {
+    width: inherit;
+    align-self: center;
+    margin-top: 150px;
+}
+
+.flippingProcess, .flippingProcess>.frontPage, .flippingProcess>.backPage {
+    width: 240px;
+    height: 300px;
+}
+
+.flippingProcess>.frontPage, .flippingProcess>.backPage {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flippingProcess>.frontPage {
+    transform: perspective( 600px) rotateY( 0deg);
+    text-align: center;
+}
+
+.flippingProcess>.backPage {
+    transform: perspective( 600px) rotateY( 180deg);
+    background: rgb(233, 152, 32);
+}
+
+.flippingProcess:hover>.frontPage {
+    transform: perspective( 600px) rotateY( -180deg);
+}
+
+.flippingProcess:hover>.backPage {
+    transform: perspective( 600px) rotateY( 0deg);
+}
