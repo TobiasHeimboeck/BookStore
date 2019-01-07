@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -13,16 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-
+    <link rel="icon" href="img/booklogo.png">
 </head>
 
 <body>
 
     <div id="main">
-
         <nav class="navbar navbar-default sticky">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                         aria-expanded="false">
@@ -34,28 +32,14 @@
                     <img class="logo" src="img/booklogo.png" alt="Book Store logo">
                     <span class="header">Ubiqum Book-Store</span>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search books">
-                        </div>
-                    </form>
-                </div>
             </div>
         </nav>
 
         <div id="loader"></div>
         <div style="display:none;" id="myDiv" class="animate-bottom">
-
             <div class="content">
-
-                <!-- Section for the books of the json api. On hover the books were flipped and you see more informations -->
                 <div id="animatedBooks"></div>
-
             </div>
-
         </div>
     </div>
 

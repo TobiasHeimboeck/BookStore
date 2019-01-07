@@ -11,7 +11,6 @@ var main = new Vue({
         startFetchingAsync(url) {
             fetch(url, {
                 method: "GET",
-                // compare the reponse to json
             }).then(function (response) {
                 return response.json();
             }).then(function (json) {
