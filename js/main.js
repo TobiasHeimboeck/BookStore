@@ -16,21 +16,16 @@ var main = new Vue({
             }).then(function (json) {
                 data = json;
                 main.books = data.books;
-                console.log(main.books);
-
-                console.log(main.books.length);
 
                 for (var i = 0; i < main.books.length; i++) {
                     main.createBookCard(main.books[i]);
                 }
 
-                console.log(1);
             }).catch(function (error) {
                 console.log(error);
             })
         },
         createBookCard(book) {
-            console.log(2);
             var cardElement = document.getElementById("animatedBooks");
 
             var flip = document.createElement("div");
